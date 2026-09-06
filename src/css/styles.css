@@ -1,18 +1,84 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+body {
+  background-color: black;
+}
+.container {
+  position: relative;
+  width: 1128px;
+  padding: 36px 0;
+  margin: 0 auto;
+}
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+ul {
+padding: 0;
+margin: 0;
+}
+
+.form {
+  margin: 0 auto 32px;
+}
+
+.gallery {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+flex-wrap: wrap;
+}
+
+.gallery-item {
+  background-color: #fff;
+  width: 360px;
+
+}
+
+img {
+  object-fit: cover;
+}
+
+.descriprion {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+  justify-content: space-between;
+    padding: 8px;
+}
+
+.descriprion li {
+  display: flex;
+  flex-direction: column;
+}
+
+.loader {
+  color: #fff;
+}
+
+.loader.is-hidden {
+display: none;
+}
+
+/*.loader {
+  --color-1: #fff;
+  --color-2: #ff3d00;
+  --size: 1px;
+
+  width: calc(48 * var(--size));
+  height: calc(48 * var(--size));
+  border: calc(5 * var(--size)) solid var(--color-1);
+  border-bottom-color: var(--color-2);
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+
+
+
+
