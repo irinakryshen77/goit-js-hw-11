@@ -6,14 +6,29 @@ const lightbox = new SimpleLightbox('.gallery a', {captionsData:"alt", captionDe
 const loader = document.querySelector(".loader")
 
 export function createGallery(images) {
-const markup = images.map(({largeImageURL, previewURL, likes, views, comments, downloads, name
- }) => `<li class="gallery-item"><a href="${largeImageURL}"><img src="${previewURL}" alt="${name}"
-      width="360" /></a><ul class = "descriprion"><li>Likes<spun>${likes
-}</spun></li>
-<li>Views<spun>${views}</spun></li>
-<li>Comments<spun>${comments}</spun></li>
-<li>Downloads<spun>${downloads}</spun></li>
-</ul></li>
+const markup = images.map(({largeImageURL,
+    webformatURL,
+    tags,
+    likes,
+    views,
+    comments,
+    downloads
+ }) => `<li class="gallery-item">
+      <a href="${largeImageURL}">
+        <img
+          src="${webformatURL}"
+          alt="${tags}"
+          width="360"
+        />
+      </a>
+
+      <ul class="descriprion">
+        <li>Likes <span>${likes}</span></li>
+        <li>Views <span>${views}</span></li>
+        <li>Comments <span>${comments}</span></li>
+        <li>Downloads <span>${downloads}</span></li>
+      </ul>
+    </li>
 `).join("")
 gallery.insertAdjacentHTML("beforeend", markup)
 lightbox.refresh()

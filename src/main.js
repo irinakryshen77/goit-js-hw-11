@@ -20,10 +20,11 @@ function hundlerSubmit (event) {
         return
     } 
 
+           clearGallery()
+       showLoader()
+       
         const respons = getImagesByQuery (query.value)
     .then (data => {
-       clearGallery()
-       showLoader()
         if (data.length <=0) {
 iziToast.show({
     message: 'Sorry, there are no images matching your search query. Please try again!',
